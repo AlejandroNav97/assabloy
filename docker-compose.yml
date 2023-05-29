@@ -1,0 +1,11 @@
+version: "3.4"
+services: 
+  assa_abloy:
+    # container_name: assa_abloy_certification
+    env_file: 
+      "./.env"
+    build:
+      context: . 
+      dockerfile: ./dockerfile
+    ports:
+      - "3001:3001"

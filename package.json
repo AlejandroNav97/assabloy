@@ -1,0 +1,48 @@
+{
+  "name": "assa-abloy-cert-server",
+  "version": "0.0.1",
+  "description": "Assa abloy certification server used to handle reservations information and key management",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: Must write tests first\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore client/\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "format": "prettier-standard --format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.corp.globant.com/Eservices/assa-certification-web.git"
+  },
+  "keywords": [
+    "Assa",
+    "abloy",
+    "certification"
+  ],
+  "author": "Globant",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "amazon-cognito-identity-js": "^5.0.2",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "date-fns": "^2.22.1",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "express-mysql-session": "^2.1.6",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.5",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "prettier-standard": "^16.4.1",
+    "request": "^2.88.2"
+  }
+}
