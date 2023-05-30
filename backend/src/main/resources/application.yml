@@ -1,0 +1,43 @@
+server:
+  servlet:
+    context-path: /assaservice
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${JWT_ISSUER_URI}
+  datasource:
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}
+    driver-class-name=org: org.mariadb.jdbc.Driver
+
+assacredential:
+  api:
+    baseUrl: ${ASSA_CREDENTIAL_API_BASEURL}
+    username: ${ASSA_CREDENTIAL_API_USERNAME}
+    password: ${ASSA_CREDENTIAL_API_PASSWORD}
+
+assavisionline:
+  api:
+    baseUrl: ${ASSA_VISIONLINE_API_BASEURL}
+    username: ${ASSA_VISIONLINE_API_USERNAME}
+    password: ${ASSA_VISIONLINE_API_PASSWORD}
+
+cognitoidp:
+    region: us-east-2
+    pool: us-east-2_nqrNDuUdp
+
+
+logging:
+  level:
+    root: INFO
+    org.springframework: ERROR
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%t]){faint} %clr(%-40.40logger{39}){cyan}[%5.5line]%clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39}[lineno:%line]: %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+
+
+

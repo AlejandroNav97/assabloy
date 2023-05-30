@@ -1,0 +1,15 @@
+{
+  "doorOperations": [
+    {
+      "doors": [
+        "101"
+      ],
+      "operation": "guest"
+    }
+  ],
+  "label": "%ROOMRANGE%:%UUID%:%CARDNUM%",
+  "endPointID": "XXQ",
+  "description": "MyHotel",
+  "expireTime": "20210618T0702",
+  "format": "rfid48"
+}
