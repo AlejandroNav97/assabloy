@@ -64,7 +64,7 @@ const auth_middleware = {
     const userPool = new AmazonCognitoIdentity.CognitoUserPool({ UserPoolId, ClientId });
 
     const userData = {
-        Username: 'manuela.lopera@globant.com',
+        Username: 'poc-test@assaabloy.com',
         Pool: userPool,
     };
 
