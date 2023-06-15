@@ -13,8 +13,8 @@ const userPool = new AmazonCognitoIdentity.CognitoUserPool({ UserPoolId, ClientI
 const Auth = {
     login: (body, callback) => {
         const loginDetails = {
-            Username: 'manuela.lopera@globant.com',
-            Password:'lopera11'
+            Username: 'poc-assabloy@test.com',
+            Password:'Casade23*.'
           };
         var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(loginDetails);
          var userDetails = {
@@ -41,7 +41,7 @@ const Auth = {
      validate: (token, callback) => {
         request(
             {
-                url : `https://cognitoidp.${pool_region}.amazonaws.com/${UserPoolId}/.well-known/jwks.json`,
+                url : `https://cognito-idp.${pool_region}.amazonaws.com/${UserPoolId}/.well-known/jwks.json`,
                 json : true
             }, function(error, response, body){
             if (!error && response.statusCode === 200) {
