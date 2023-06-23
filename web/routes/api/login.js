@@ -14,7 +14,7 @@ const ClientId = config.cognito.clientId;
 const userPool = new AmazonCognitoIdentity.CognitoUserPool({ UserPoolId, ClientId});
 
 const userData = {
-  Username: 'poc-assabloy@test.com',
+  Username: 'passabloy@test.com',
   Pool: userPool
 };
 
